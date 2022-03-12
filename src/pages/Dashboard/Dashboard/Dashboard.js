@@ -1,49 +1,132 @@
-import React, { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import { SidebarData } from "./SidebarData";
-import { IconContext } from 'react-icons';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import "./Dashboard.css"
-import Footer from '../../Shared/Footer/Footer';
+import { faCartPlus, faCommentAlt, faFileInvoiceDollar, faPlusSquare, faShoppingBasket, faSignOutAlt, faTasks, faUser, faUsersCog, faUserShield } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { Alert, Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
+import { NavLink, Outlet } from 'react-router-dom';
+import logo from '../../../images/tsunami2-removebg-preview.png';
+import useAuth from '../../hooks/useAuth';
+import './Dashboard.css'
 
 const Dashboard = () => {
-    const [sidebar, setSidebar] = useState(false);
 
-    const showSidebar = () => setSidebar(!sidebar);
+    const { user, logOut, admin } = useAuth();
 
     return (
-        <>
-            <IconContext.Provider value={{ color: '#fff' }}>
-                <div className='navbar2'>
-                    <Link to='#' className='menu-bars'>
-                        <FaIcons.FaBars onClick={showSidebar} />
-                    </Link>
-                </div>
-                <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                    <ul className='nav-menu-items' onClick={showSidebar}>
-                        <li className='navbar-toggle'>
-                            <Link to='#' className='menu-bars'>
-                                <AiIcons.AiOutlineClose />
-                            </Link>
-                        </li>
-                        {SidebarData.map((item, index) => {
-                            return (
-                                <li key={index} className={item.cName}>
-                                    <Link to={item.path}>
-                                        {item.icon}
-                                        <span style={{ "marginLeft": "16px" }}>{item.title}</span>
-                                    </Link>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </nav>
+        <div>
+            <Row>
+                {/* dashboard nested route */}
+                <Col xs={12} sm={12} md={3} className="px-0">
+                    <Navbar style={{
+                        'height': '120vh', 'background': 'linear-gradient(to right, #dae2f8, #d6a4a4)'
+                    }} expand="md">
+                        <Container className=" d-flex flex-column dashboard-route">
 
-            </IconContext.Provider>
-            <Outlet></Outlet>
-            <Footer />
-        </>
+                            <Navbar.Brand href="/home">
+                                <img src={logo} alt="" style={{ "height": "65px" }} />
+                            </Navbar.Brand>
+
+                            <hr className="w-100" />
+
+                            <NavLink to='/dashboard' className="text-dark fs-4 fw-bolder my-1 text-decoration-none">
+                                <FontAwesomeIcon className=" me-2" icon={faUsersCog} />
+                                Dashboard
+                            </NavLink>
+
+                            <hr className="w-100" />
+
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-auto" />
+
+                            <Navbar.Collapse id="basic-navbar-nav" className="me-auto">
+
+                                <Nav className="d-flex flex-column">
+
+                                    {/* dashboard options */}
+
+                                    {admin ?
+                                        <>
+                                            <NavLink to='/dashboard/manageOrder' className='text-decoration-none ms-5 fw-bolder fs-6 text-dark'>
+                                                <FontAwesomeIcon className="me-2" icon={faShoppingBasket} />
+                                                Manage All Order
+                                            </NavLink><br />
+
+                                            <NavLink to='/dashboard/addService' className='text-decoration-none ms-5 fw-bolder fs-6  text-dark'>
+                                                <FontAwesomeIcon className="me-2" icon={faPlusSquare} />
+                                                Add New Service
+                                            </NavLink><br />
+
+                                            <hr className="w-100 bg-dark" />
+
+                                            <NavLink to='/dashboard/makeAdmin' className='text-decoration-none ms-5 fw-bolder fs-6 text-dark'>
+                                                <FontAwesomeIcon className="me-2" icon={faUserShield} />
+                                                Make Admin
+                                            </NavLink><br />
+
+                                            <NavLink to='/dashboard/manageService' className='text-decoration-none ms-5 fw-bolder fs-6 text-dark'>
+                                                <FontAwesomeIcon className="me-2" icon={faTasks} />
+                                                Manage Services
+                                            </NavLink><br />
+                                        </>
+                                        :
+                                        <>
+                                            <NavLink to='/dashboard/payment' className='text-decoration-none ms-5 fw-bolder fs-6 text-dark'>
+                                                <FontAwesomeIcon className="me-2" icon={faFileInvoiceDollar} />
+                                                Payment
+                                            </NavLink><br />
+
+
+                                            <NavLink to='/dashboard/myOrder' className='text-decoration-none ms-5 fs-6 fw-bolder text-dark'>
+                                                <FontAwesomeIcon className="me-2" icon={faCartPlus} />
+                                                My Orders
+                                            </NavLink><br />
+
+                                            <NavLink to='/dashboard/addservice' className='text-decoration-none ms-5 fs-6 fw-bolder text-dark'>
+                                                <FontAwesomeIcon className="me-2" icon={faCommentAlt} />
+                                                Add Package
+                                            </NavLink><br />
+
+                                            <NavLink to='/dashboard/addReview' className='text-decoration-none ms-5 fs-6 fw-bolder text-dark'>
+                                                <FontAwesomeIcon className="me-2" icon={faCommentAlt} />
+                                                Add Review
+                                            </NavLink><br />
+                                        </>
+                                    }
+
+                                    {/* users name and logout button */}
+
+                                    <hr className="w-100 mx-auto" />
+
+                                    <Navbar.Text className="ms-5 fs-5 my-1  fw-bolder me-auto" style={{ 'color': '#c13f22' }}>
+                                        <FontAwesomeIcon className=" me-2" icon={faUser} />
+                                        <span style={{ 'color': '#c13f22' }}>
+                                            {user.displayName && user.displayName}
+                                        </span>
+                                    </Navbar.Text>
+
+                                    <NavLink onClick={logOut} className="text-decoration-none ms-5 text-dark fw-bolder fs-6" to="/home">
+                                        <FontAwesomeIcon className="me-2" icon={faSignOutAlt} />
+                                        Logout
+                                    </NavLink>
+                                    <NavLink to='/home' className='text-decoration-none ms-5 fs-6 fw-bolder text-dark'>
+                                                <FontAwesomeIcon className="me-2" icon={faSignOutAlt} />
+                                                Go Home
+                                            </NavLink>
+                                </Nav>
+                            </Navbar.Collapse>
+                        </Container>
+                    </Navbar>
+                </Col>
+                <Col xs={12} sm={12} md={9} className="px-0 ">
+                    <div className=''>
+                        <Alert style={{ 'background': 'linear-gradient(to right, #dae2f8, #dae2f8' }} className="text-start border-0">
+                            <h3 className="mb-5">Hello, {user.displayName}</h3>
+
+                        </Alert>
+                    </div>
+                    <Outlet />
+                </Col>
+            </Row>
+
+        </div >
     );
 };
 

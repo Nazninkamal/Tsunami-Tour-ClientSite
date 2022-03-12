@@ -10,7 +10,7 @@ import useAuth from '../../hooks/useAuth';
 const usersIcon = <AiOutlineUser />
 
 const Navigation = () => {
-    const { user, logOut, admin } = useAuth();
+    const { user, logOut } = useAuth();
 
     const [colorChange, setColorchange] = useState(false);
     const changeNavbarColor = () => {
@@ -28,16 +28,24 @@ const Navigation = () => {
             className={colorChange ? 'navbar1 colorChange' : 'navbar1'}
         >
             <Container>
-                <Navbar.Brand href="/home" className='nav-logo text-white'>Travel<span className='main-font-color'>Sphere</span></Navbar.Brand>
+                <Navbar.Brand href="/home" className='nav-logo text-white '>Tsunami Tour</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
 
                     <Nav className="ms-auto" defaultActiveKey="/home">
-                        <NavLink to="/home" className="text-decoration-none mx-3 fs-5  menu-items">Home</NavLink>
-                        <NavLink to="/feedback" className="text-decoration-none mx-3 fs-5  menu-items">Travel Experience</NavLink>
+                        <NavLink to="/home" className="text-decoration-none mx-2 fs-5  menu-items">Home</NavLink>
+                        <NavLink to="/about" className="text-decoration-none mx-2 fs-5  menu-items">About</NavLink>
+                        <NavLink to="/feedback" className="text-decoration-none mx-2 fs-5  menu-items">Travel Experience</NavLink>
                        
 
-                            <NavLink to="/dashboard" className="text-decoration-none mx-3 fs-5  menu-items">Dashboard</NavLink>
+                         
+
+                            {
+                            user?.email ?
+                            <NavLink to="/dashboard" className="text-decoration-none mx-2 fs-5  menu-items">Dashboard</NavLink>
+                                :
+                              <></>
+                        }
                       
 
                     </Nav>
@@ -59,6 +67,7 @@ const Navigation = () => {
                                 :
                                 <NavDropdown.Item as={NavLink} to="/register" className="main-font-color chngbg dropdown-menu-items">Register</NavDropdown.Item>
                         }
+                         
 
                     </NavDropdown>
 

@@ -1,3 +1,5 @@
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Alert, Button, FormControl, InputGroup } from 'react-bootstrap';
 
@@ -13,7 +15,8 @@ const MakeAdmin = () => {
     const handleMakeAdmin = e => {
         const user = { email };
 
-        fetch('http://localhost:5000/users/admin', {
+
+        fetch('https://stormy-woodland-90777.herokuapp.com/colorCastleUsers/admin', {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)
@@ -23,35 +26,46 @@ const MakeAdmin = () => {
                 console.log(data);
                 if (data.modifiedCount) {
                     setSuccess(true);
-                    window.location.reload()
                 }
             })
         e.preventDefault();
-    }
+    };
     return (
-        <div className="d-block w-50 m-auto pt-5">
+        <div className="mt-5">
             {/* make admin title */}
-            <h2 className='text-center'>MAKE AN ADMIN</h2>
+            <h2 className='ms-5'>MAKE AN ADMIN</h2>
+
 
             {/* input form for making admin */}
-            <form onSubmit={handleMakeAdmin} className="mt-5">
+            <form onSubmit={handleMakeAdmin} className="pt-3">
 
-                <InputGroup className="mb-3 pt-1 w-50 mx-auto">
+                <InputGroup className="mb-3 mt-4 w-50 mx-auto">
+
                     <FormControl
-                        placeholder="Enter new admin email"
+                        placeholder="abc@example.com"
                         aria-label="Your Email"
                         aria-describedby="basic-addon2"
                         onBlur={handleOnBlur}
                         type="email"
-                        className="py-2"
+
                     />
+
+
+                    <InputGroup.Text id="basic-addon2"
+                        className="bg-primary bg-opacity-75 ">
+                        <FontAwesomeIcon className="fs-5 text-white mx-3" icon={faUser} />
+                    </InputGroup.Text>
 
                 </InputGroup>
 
+                <br />
+
+
                 <Button variant="primary"
-                    className="btn_regular w-50 py-2 mt-2 d-block m-auto" type="submit">
+                    className="w-50 mx-auto d-block mb-3 " style={{ 'background': 'linear-gradient(to right, #b92b27, #1565c0)' }} type="submit">
                     Make Admin
                 </Button><br />
+
             </form>
 
 

@@ -1,0 +1,23 @@
+
+    
+    #Testimonials h3{
+       
+        
+        font-family: Roboto Mono,monospace;
+        text-align: left;
+    }
+    .review-img{
+       background-color: rgb(166, 184, 184);
+      
+    }
+    .carousel-inner{
+      /* height: 500px; */
+    }
+    .caro-item{
+      height: 370px;
+      margin-bottom: 70px;
+    }
+    .carousel-item img{
+      margin: 0 auto;
+      width: 150px;
+    }

@@ -3,11 +3,11 @@
     padding: 5px;
     
     /* border-radius: 5px; */
-    color: rgb(240, 15, 154);
+    color: white;
     font-size: 30px;
   }
   .icon:hover {
-    background-color: rgb(250, 25, 25);
+    background-color: rgb(87, 217, 220);
   }
   .footer-menu {
     list-style: none;
@@ -16,7 +16,7 @@
     cursor: pointer;
   }
   .footer-menu:hover {
-    color: red;
+    color: wheat;
   }
   .footer-input {
     padding: 8px;
@@ -25,13 +25,13 @@
     background-color: gray;
   }
   .footer-container {
-      background-color: rgb(107, 236, 100);
+      background-color: #042f5d;
    
     padding-top: 80px;
-    padding-bottom: 80px;
-    color: rgb(12, 11, 11);
+    padding-bottom: 2%;
+    color: white;
   }
   .foter-phone-icon {
     font-size: 30px;
-    color: red;
+    color: white;
   }

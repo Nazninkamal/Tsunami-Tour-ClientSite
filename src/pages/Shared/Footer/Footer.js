@@ -1,29 +1,24 @@
 import React from "react";
 import "./Footer.css";
-import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import logo from '../../image/born-beauty logo.jpg'
+import logo from '../../../images/tsunami2-removebg-preview.png'
 import {
   faFacebookSquare,
   faInstagramSquare,
   faTwitterSquare,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import {
-  faCoffee,
-  faPhoneVolume,
-  faMapMarkedAlt,
-} from "@fortawesome/free-solid-svg-icons";
+
 
 const Footer = () => {
   return (
-    <div>
-      <div className="footer-container ">
-        <div className="container mx-5 ">
+    
+      <div className="footer-container">
+        <div className=" mx-5 ">
           <div className="row">
             <div className="col-md-4">
               <div className="left-container text-start">
-                {/* <h1>   <img className='rounded-circle' src={logo} alt="" width="80" height="80"/>BORN BEAUTY</h1> */}
+                 <h1>   <img className='' src={logo} alt="" width="80" height="80"/>Tsunami</h1>
                 <div className="icons-container d-flex text-center ">
                    <div className="icon">
                     <FontAwesomeIcon icon={faInstagramSquare} />
@@ -85,13 +80,15 @@ const Footer = () => {
             </div>
            
           </div>
-          <h6 className="mt-5">Copyright © 2022, naz-theme | DesignThemes.</h6>
+          
         </div>
-        
+       
+       <h6 className="mt-5 d-flex justify-content-center">Copyright © 2022, naz-theme | DesignThemes.</h6>
+      
        
       </div>
       
-    </div>
+    
   );
 };
 
