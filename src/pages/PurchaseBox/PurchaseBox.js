@@ -10,7 +10,7 @@ const PurchaseBox = () => {
   const onSubmit = data => {
     console.log(data);
 
-    axios.post('http://localhost:5000/purchase', data)
+    axios.post('https://shielded-dawn-26233.herokuapp.com/purchase', data)
     .then(res => {
       if(res.data.insertedId){
         alert('added successfully');

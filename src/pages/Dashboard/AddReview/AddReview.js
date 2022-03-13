@@ -12,7 +12,7 @@ const AddReview = () => {
 
     const onSubmit = data => {
 
-        axios.post('http://localhost:5000/review', data)
+        axios.post('https://shielded-dawn-26233.herokuapp.com/review', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Review Added successfully");

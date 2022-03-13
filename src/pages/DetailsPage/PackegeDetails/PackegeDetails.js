@@ -12,7 +12,7 @@ const PackegeDetails = () => {
     const {packegesId} = useParams()
     const [packege, setPackege] = useState({})
     useEffect(() =>{
-        fetch(`http://localhost:5000/services/${packegesId}`)
+        fetch(`https://shielded-dawn-26233.herokuapp.com/services/${packegesId}`)
         .then((res) => res.json())
           .then((data) => setPackege(data))
     } , [])
