@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className=" mx-5 ">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-4 col-sm-4">
               <div className="left-container text-start">
                  <h1>   <img className='' src={logo} alt="" width="80" height="80"/>Tsunami</h1>
                 <div className="icons-container d-flex text-center ">
@@ -40,7 +40,7 @@ const Footer = () => {
                   </div>
               </div>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-2 col-sm-2">
               <div className="footer-menu-container text-start">
                 
                   <h3>HELP</h3>
@@ -52,8 +52,8 @@ const Footer = () => {
                 
               </div>
             </div>
-            <div className="col-md-1"></div>
-            <div className="col-md-2">
+            <div className="col-md-1  "></div>
+            <div className="col-md-2 col-sm-2">
             <div className="footer-menu-container text-start">
                 <h3>Support</h3>
                 <h4 className="footer-menu">About Us</h4>
@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
             </div>
             <div className="col-md-1"></div>
-            <div className="col-md-2">
+            <div className="col-md-2 col-sm-2">
             <div className="footer-menu-container text-start">
                 
                 <h3>Information</h3>

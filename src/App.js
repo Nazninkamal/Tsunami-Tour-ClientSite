@@ -17,6 +17,8 @@ import AddReview from './pages/Dashboard/AddReview/AddReview';
 import MyOrder from './pages/Dashboard/MyOrders/MyOrder/MyOrder';
 import AddService from './pages/Dashboard/AddService/AddService';
 import PackegeDetails from './pages/DetailsPage/PackegeDetails/PackegeDetails';
+import Blog from './pages/Blog/Blog';
+import PurchaseBox from './pages/PurchaseBox/PurchaseBox';
 
 
 
@@ -28,6 +30,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='home' element={<Home />} />
         <Route path='about' element={<About />} />
+        <Route path='blogs' element={<Blog />} />
+        <Route path='purchaseBox' element={<PurchaseBox />} />
         <Route path='packegeDetails/:packegesId' element={<PackegeDetails/>}/>
         <Route path="feedback" element={<PrivateRoute><WriteBlog></WriteBlog></PrivateRoute>}></Route>
         <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>}>

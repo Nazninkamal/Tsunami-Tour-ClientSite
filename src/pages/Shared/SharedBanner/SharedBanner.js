@@ -1,10 +1,11 @@
 import React from 'react';
-import bg from '../../../images/green.png'
+import bg from '../../../images/sky-banner.jpg'
 
 
 const SharedBanner = ({ pageName }) => {
     return (
-        <div style={{
+    <div className='col-sm-12'>
+            <div style={{
             width: '100%',
             backgroundImage: `url(${bg})`,
             backgroundSize: 'cover',
@@ -24,6 +25,7 @@ const SharedBanner = ({ pageName }) => {
                     {pageName}
                 </h1>
             </div>
+    </div>
        
     );
 };

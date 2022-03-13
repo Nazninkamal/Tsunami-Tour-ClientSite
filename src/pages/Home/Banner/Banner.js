@@ -26,7 +26,7 @@ const Banner = () => {
                     <Carousel.Caption className='carousel-content'>
                         <h1>Make Your Tour <span className='main-font-color'>Amazing</span>  <br /> With Us</h1>
                         <p>We are here to make your tour comfort!</p>
-                        <Button variant="none" className='w-25 py-2 explore-button'>Explore</Button>
+                        {/* <Button variant="none" className='w-25 py-2 explore-button'>Explore</Button> */}
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item >
@@ -39,7 +39,7 @@ const Banner = () => {
                     <Carousel.Caption className='carousel-content'>
                         <h1>Explore Your <br /><span className='main-font-color'>Travel</span></h1>
                         <p>We are here to make your tour comfort!</p>
-                        <Button variant="none" className='w-25 py-2 explore-button'>Explore</Button>
+                        {/* <Button variant="none" className='w-25 py-2 explore-button'>Explore</Button> */}
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -52,7 +52,7 @@ const Banner = () => {
                     <Carousel.Caption className='carousel-content'>
                         <h1>Explore The World <br />With <span className='main-font-color'>Ease</span></h1>
                         <p>We are here to make your tour comfort!</p>
-                        <Button variant="none" className='w-25 py-2 explore-button'>Explore</Button>
+                        {/* <Button variant="none" className='w-25 py-2 explore-button'>Explore</Button> */}
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -65,7 +65,7 @@ const Banner = () => {
                     <Carousel.Caption className='carousel-content'>
                         <h1>Make Your Tour <br /><span className='main-font-color'>Amazing</span> With Us</h1>
                         <p>We are here to make your tour comfort!</p>
-                        <Button variant="none" className='w-25 py-2 explore-button'>Explore</Button>
+                        {/* <Button variant="none" className='w-25 py-2 explore-button'>Explore</Button> */}
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -78,7 +78,7 @@ const Banner = () => {
                     <Carousel.Caption className='carousel-content'>
                         <h1>Travel Most <span className='main-font-color'>Beautiful</span> <br />Place With Us</h1>
                         <p>We are here to make your tour comfort!</p>
-                        <Button variant="none" className='w-25 py-2 explore-button'>Explore</Button>
+                        {/* <Button variant="none" className='w-25 py-2 explore-button'>Explore</Button> */}
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

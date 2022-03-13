@@ -5,6 +5,7 @@ import PurchaseBox from '../../PurchaseBox/PurchaseBox';
 import SharedBanner from '../../Shared/SharedBanner/SharedBanner';
 import Navigation from '../../Shared/Navigation/Navigation';
 import Footer from '../../Shared/Footer/Footer';
+import img from '../../../images/book-img.svg'
 
 
 const PackegeDetails = () => {
@@ -40,6 +41,9 @@ const PackegeDetails = () => {
              </Col>
              <Col sm={12} md={5} lg={5}>
              <PurchaseBox/>
+           <div>
+           <img src={img} alt="" className='mt-5 pt-5'/>
+           </div>
              </Col>
           </Row>
           </Container>

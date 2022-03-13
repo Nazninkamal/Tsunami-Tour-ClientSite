@@ -1,4 +1,5 @@
 .imgg:hover img{
  
 	transform: scale(1.2, 1.2);
+	width: auto;
 }

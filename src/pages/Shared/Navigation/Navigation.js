@@ -7,6 +7,7 @@ import { FiLogOut } from "react-icons/fi";
 
 import useAuth from '../../hooks/useAuth';
 
+
 const usersIcon = <AiOutlineUser />
 
 const Navigation = () => {
@@ -36,6 +37,7 @@ const Navigation = () => {
                         <NavLink to="/home" className="text-decoration-none mx-2 fs-5  menu-items">Home</NavLink>
                         <NavLink to="/about" className="text-decoration-none mx-2 fs-5  menu-items">About</NavLink>
                         <NavLink to="/feedback" className="text-decoration-none mx-2 fs-5  menu-items">Travel Experience</NavLink>
+                        <NavLink to="/blogs" className="text-decoration-none mx-2 fs-5  menu-items">Blogs</NavLink>
                        
 
                          

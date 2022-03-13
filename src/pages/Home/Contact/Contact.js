@@ -3,19 +3,7 @@ import emailjs from '@emailjs/browser';
 import './Contact.css'
 import {Col, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// // import logo from '../../image/born-beauty logo.jpg'
-// import {
-//   faFacebookSquare,
-//   faInstagramSquare,
-//   faTwitterSquare,
-//   faYoutube,
-// } from "@fortawesome/free-brands-svg-icons";
-// import {
-//   faCoffee,
-//   faPhoneVolume,
-//   faMapMarkedAlt,
-// } from "@fortawesome/free-solid-svg-icons";
+
 
 
 
