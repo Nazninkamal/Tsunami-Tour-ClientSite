@@ -24,12 +24,12 @@ const PackegeDetails = () => {
           <SharedBanner pageName={packege.name} />
           <Container>
           <Row className='my-5 '>
-             <Col sm={12} md={7} lg={7}>
+             <Col xm={12} sm={7} md={7} lg={7}>
                  <div className='d-flex justify-content-between mb-3 '>
                  <h3>{packege.name}</h3>
                  <h3>$ {packege.price}</h3>
                  </div>
-               <img className='mb-5' style={{ width: 650, height: 450,objectFit: "cover"}} src={packege.img} alt="" />
+               <img className='mb-5' style={{ width: "100%", height: 450,objectFit: "cover"}} src={packege.img} alt="" />
 
                <h3  className='mt-3'>Session</h3>
               
@@ -39,7 +39,7 @@ const PackegeDetails = () => {
                <p>{packege.description}</p>
                
              </Col>
-             <Col sm={12} md={5} lg={5}>
+             <Col xm={12} sm={5} md={5} lg={5}>
              <PurchaseBox/>
            <div>
            <img src={img} alt="" className='mt-5 pt-5'/>

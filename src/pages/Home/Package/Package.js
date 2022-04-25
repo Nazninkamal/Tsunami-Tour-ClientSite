@@ -5,7 +5,7 @@ import './Package.css'
 const Package = ({pac}) => {
     const { _id, name, img,shortdescription, duration, reviews} = pac;
     return (
-        <Card className = " rounded-3 mt-5" style={{ width: '22rem' }}>
+        <Card className = " rounded-3 mt-5" style={{ width: '100%' }}>
           <Link to={`/packegeDetails/${_id}`} style={{ textDecoration: "none", color:"black" }}>
         <Card.Img className='imgg' variant="top" src={img} />
         <Card.Body className="text-xl-start">

@@ -20,8 +20,8 @@ const Home = () => {
           <Packages></Packages>
           <Discounts></Discounts> 
          <Contact></Contact>
-         <NewsLetter></NewsLetter>
-        
+         {/* <NewsLetter></NewsLetter> 
+         */}
        
           <Footer></Footer>
       

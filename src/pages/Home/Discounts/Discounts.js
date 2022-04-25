@@ -6,6 +6,7 @@ import discount3 from '../../../images/g-3.jpg'
 import discount4 from '../../../images/g-4.jpg'
 import discount5 from '../../../images/g-5.jpg'
 import discount6 from '../../../images/g-6.jpg'
+import { Row } from 'react-bootstrap';
 const discounts = [
     {
         id: 1,
@@ -61,22 +62,21 @@ const discounts = [
 const Discounts = () => {
     
     return (
-        <div id="discounts" className="row mx-5 my-5 py-5">
-           
-       <div className="">
-       <h2 className='d-flex justify-content-center hedding2'>Top Discount Activities</h2>
+        <Row id="discounts" className=" mx-5 my-5 py-5">
+        
+         <h2 className='d-flex justify-content-center hedding2'>Top Discount Activities</h2>
          
-           </div>
-           <div className="row my-5">
+         
+       
           {
               discounts.map(discount => <Discount
               key={discount.name}
               discount = {discount}
               ></Discount>)
           }
-           </div>
+          
            
-        </div>
+        </Row>
     );
 };
 

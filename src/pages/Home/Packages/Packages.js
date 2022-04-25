@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
 import Package from '../Package/Package';
 import './Packages.css'
 
@@ -13,7 +14,7 @@ const Packages = () => {
     
     return (
         <div id="packages" className=' mx-5 my-5 py-5'>
-            
+            <Container>
             <h2 className="d-flex justify-content-center hedding2"> Popular Travel Packages</h2>
             <div className="service-container">
             { 
@@ -24,6 +25,7 @@ const Packages = () => {
              ></Package>)
              }
             </div>
+            </Container>
             
         </div>
     );

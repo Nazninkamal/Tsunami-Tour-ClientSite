@@ -1,6 +1,6 @@
 import React from 'react';
 import './Popular.css'
-import { Card, CardGroup } from 'react-bootstrap';
+import { Card, CardGroup, Container } from 'react-bootstrap';
 import img1 from "../../../images/tokyo.jpg"
 import img2 from "../../../images/seoul.jpg"
 import img3 from "../../../images/paris (2).jpg"
@@ -8,12 +8,13 @@ import img4 from "../../../images/london.jpg"
 
 const Popular = () => {
     return (
-        <div className='my-5 '>
+    <Container>
+          <div className='my-5 '>
         <h2 className='hedding2 d-flex justify-content-center'>Popular Destinations</h2>
         <h6 className='hedding2 d-flex justify-content-center mb-5'>World's best tourist destinations</h6>
 
         <CardGroup >
-  <Card className='ms-5 galleryImg'>
+  <Card className=' galleryImg'>
    <div style={{overflow:"hidden"}}>
    <Card.Img
     height={300}
@@ -52,11 +53,11 @@ const Popular = () => {
    
   </Card>
 
-  <Card className='ms-3 me-5 galleryImg'>
+  <Card className='ms-3 galleryImg'>
   <div style={{overflow:"hidden"}}>
    <Card.Img
     height={300}
-    variant="top" src={img4} />
+    variant="top" src={img4}  />
    </div>
 
   <div className='team'>
@@ -66,6 +67,7 @@ const Popular = () => {
   </Card>
 </CardGroup>
         </div>
+    </Container>
     );
 };
 
