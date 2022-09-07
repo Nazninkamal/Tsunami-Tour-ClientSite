@@ -13,7 +13,7 @@ const Packages = () => {
     }, [])
     
     return (
-        <div id="packages" className=' mx-5 my-5 py-5'>
+        <div id="packages" className=' mx-5 my-3 '>
             <Container>
             <h2 className="d-flex justify-content-center hedding2"> Popular Travel Packages</h2>
             <div className="service-container">

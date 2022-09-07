@@ -27,7 +27,7 @@ const MyOrder = () => {
     }
     return (
         <div>
-            <h1 className="text-warning">All Order is here</h1>
+            <h1 className="d-flex text-align-center">Something went wrong</h1>
             {
                 services.map(service => <div className="my-5 bg-light">
                     key={service._id}

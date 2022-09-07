@@ -6,7 +6,7 @@ import discount3 from '../../../images/g-3.jpg'
 import discount4 from '../../../images/g-4.jpg'
 import discount5 from '../../../images/g-5.jpg'
 import discount6 from '../../../images/g-6.jpg'
-import { Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 const discounts = [
     {
         id: 1,
@@ -62,9 +62,10 @@ const discounts = [
 const Discounts = () => {
     
     return (
-        <Row id="discounts" className=" mx-5 my-5 py-5">
+        <Container>
+        <Row id="discounts">
         
-         <h2 className='d-flex justify-content-center hedding2'>Top Discount Activities</h2>
+         <h2 className='d-flex justify-content-center hedding2 my-5'>Top Discount Activities</h2>
          
          
        
@@ -77,6 +78,7 @@ const Discounts = () => {
           
            
         </Row>
+        </Container>
     );
 };
 

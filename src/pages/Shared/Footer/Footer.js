@@ -57,8 +57,8 @@ const Footer = () => {
             <div className="footer-menu-container text-start">
                 <h3>Support</h3>
                 <h4 className="footer-menu">About Us</h4>
-                <h4 className="footer-menu">Careers</h4>
-                <h4 className="footer-menu">Deliveries</h4>
+                <h4 className="footer-menu">Blogs</h4>
+                <h4 className="footer-menu">Feedback</h4>
                 <h4 className="footer-menu">Refund Requests</h4>
                 <h4 className="footer-menu">Contact us</h4>
               

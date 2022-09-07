@@ -18,7 +18,6 @@ import AddService from './pages/Dashboard/AddService/AddService';
 import PackegeDetails from './pages/DetailsPage/PackegeDetails/PackegeDetails';
 import Blog from './pages/Blog/Blog';
 import PurchaseBox from './pages/PurchaseBox/PurchaseBox';
-import Navigation from './pages/Shared/Navigation/Navigation';
 import DiscountBooking from './pages/Home/Discount/DiscountBooking';
 
 
