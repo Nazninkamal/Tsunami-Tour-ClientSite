@@ -6,7 +6,6 @@ import Home from './pages/Home/Home/Home';
 import WriteBlog from './pages/WriteBlog/WriteBlog';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Login from './pages/Login/Login/Login';
-import Register from './pages/Login/Register/Register';
 import NotFound from './pages/NotFound/NotFound';
 import About from './pages/About/About';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
@@ -19,13 +18,16 @@ import AddService from './pages/Dashboard/AddService/AddService';
 import PackegeDetails from './pages/DetailsPage/PackegeDetails/PackegeDetails';
 import Blog from './pages/Blog/Blog';
 import PurchaseBox from './pages/PurchaseBox/PurchaseBox';
+import Navigation from './pages/Shared/Navigation/Navigation';
 
 
 
 
 function App() {
   return (
+   
     <AuthProvider>
+       {/* <Navigation/> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='home' element={<Home />} />
@@ -51,7 +53,6 @@ function App() {
        
 
         <Route path='login' element={<Login />} />
-        <Route path='register' element={<Register />} />
         <Route path= "*" element={<NotFound/>}></Route> 
 
       </Routes>

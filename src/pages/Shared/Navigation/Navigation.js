@@ -59,15 +59,15 @@ const Navigation = () => {
                                 <NavDropdown.Item className="main-font-color dropdown-menu-items bg-none fw-bolder"><AiOutlineUser /> {user.displayName}</NavDropdown.Item>
 
                                 :
-                                <NavDropdown.Item as={NavLink} to="/login" className="main-font-color chngbg dropdown-menu-items">Login</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/login" className="main-font-color chngbg dropdown-menu-items"> <FiLogOut />Sign in</NavDropdown.Item>
                         }
 
                         {
                             user?.email ?
                                 <NavDropdown.Item as={NavLink} to="/home" onClick={logOut} className="main-font-color chngbg dropdown-menu-items"><FiLogOut /> Logout</NavDropdown.Item>
 
-                                :
-                                <NavDropdown.Item as={NavLink} to="/register" className="main-font-color chngbg dropdown-menu-items">Register</NavDropdown.Item>
+                                : <></>
+                                // <NavDropdown.Item as={NavLink} to="/register" className="main-font-color chngbg dropdown-menu-items">Register</NavDropdown.Item>
                         }
                          
 

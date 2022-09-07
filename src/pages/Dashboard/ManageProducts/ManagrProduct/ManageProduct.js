@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 
 const ManageProduct = ({ manage }) => {
-    const { name, price, _id, img, desc, picture1 } = manage;
+    const { name, price, _id, desc, picture1 } = manage;
     const [showDetails, setShowDetails] = useState(false);
 
     const [show, setShow] = useState(false);
@@ -86,8 +86,8 @@ const ManageProduct = ({ manage }) => {
             {/* Confirmation alert */}
             <Modal show={show} onHide={handleClose}>
 
-                <div class="modal-header">
-                    <h5 class="modal-title text-primary" id="exampleModalLabel">Confirmation</h5>
+                <div className="modal-header">
+                    <h5 className="modal-title text-primary" id="exampleModalLabel">Confirmation</h5>
                 </div>
 
                 <Modal.Body>Are you sure you want to <span className="text-danger fw-bold"> delete</span> this product? This action cannot be undone and you will be unable to recover any data.</Modal.Body>

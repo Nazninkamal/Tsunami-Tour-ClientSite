@@ -4,7 +4,7 @@ import Navigation from '../../Shared/Navigation/Navigation';
 import Banner from '../Banner/Banner';
 import Contact from '../Contact/Contact';
 import Discounts from '../Discounts/Discounts';
-import NewsLetter from '../NewsLetter/NewsLetter';
+// import NewsLetter from '../NewsLetter/NewsLetter';
 import Packages from '../Packages/Packages';
 import Popular from '../Popular/Popular';
 
@@ -19,7 +19,7 @@ const Home = () => {
           <Popular></Popular>
           <Packages></Packages>
           <Discounts></Discounts> 
-         <Contact></Contact>
+          <Contact></Contact>
          {/* <NewsLetter></NewsLetter> 
          */}
        

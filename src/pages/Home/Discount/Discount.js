@@ -11,7 +11,7 @@ const Discount = ({discount}) => {
           <Link to={`/purchaseBox`} style={{ textDecoration: "none", color:"black" }}>
 <div className="card-group">
   <div className="card">
-    <img src={img} class="card-img-top" alt="..." style={{objectFit:'cover', height:200, width:"100%"}}/>
+    <img src={img} className="card-img-top" alt="..." style={{objectFit:'cover', height:200, width:"100%"}}/>
     <div className="card-body">
       <h5 className="card-title  d-flex justify-content-center">{name}</h5>
       <p className="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

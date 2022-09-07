@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from '../../../images/sky-banner.jpg'
+import bg from '../../../images/banner-5.jpg'
 
 
 const SharedBanner = ({ pageName }) => {
