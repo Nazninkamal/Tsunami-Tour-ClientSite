@@ -20,7 +20,7 @@ const PurchaseBox = () => {
   };
     return (
         <div className="purchase mt-5 rounded-3">
-        <h4 className='d-flex justify-content-center hedding2 py-3'>Book this tour</h4>
+        <h4 className='d-flex justify-content-center hedding2 py-3' style={{color:"wheat"}}>Book this tour</h4>
         <form onSubmit={handleSubmit(onSubmit)} >
       <input defaultValue={user.displayName} {...register("name", { required: true })}className="form-control"/>
       <input defaultValue={user.email}  {...register("email", { required: true })} className="form-control"/> 

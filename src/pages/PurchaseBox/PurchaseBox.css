@@ -10,7 +10,9 @@
     margin-bottom: 12px;
 }
 .purchase{
-    background-color: rgb(216, 224, 216);
+   background-image: url('../../images/banner-2.jpg');
+   width: 100%;
+ 
 }
 .area{
     height: 120px;

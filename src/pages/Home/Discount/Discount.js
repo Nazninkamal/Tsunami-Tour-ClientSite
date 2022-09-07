@@ -8,7 +8,7 @@ const Discount = ({discount}) => {
 
     return (
         <Col lg={4} md={4} sm={6} xs={12} className="mb-5"> 
-          <Link to={`/purchaseBox`} style={{ textDecoration: "none", color:"black" }}>
+          <Link to={`/discountBooking`} style={{ textDecoration: "none", color:"black" }}>
 <div className="card-group">
   <div className="card">
     <img src={img} className="card-img-top" alt="..." style={{objectFit:'cover', height:200, width:"100%"}}/>

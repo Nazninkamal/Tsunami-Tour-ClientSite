@@ -19,6 +19,7 @@ import PackegeDetails from './pages/DetailsPage/PackegeDetails/PackegeDetails';
 import Blog from './pages/Blog/Blog';
 import PurchaseBox from './pages/PurchaseBox/PurchaseBox';
 import Navigation from './pages/Shared/Navigation/Navigation';
+import DiscountBooking from './pages/Home/Discount/DiscountBooking';
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='about' element={<About />} />
         <Route path='blogs' element={<Blog />} />
         <Route path='purchaseBox' element={<PurchaseBox />} />
+        <Route path='discountBooking' element={<DiscountBooking/>} />
         <Route path='packegeDetails/:packegesId' element={<PackegeDetails/>}/>
         <Route path="feedback" element={<PrivateRoute><WriteBlog></WriteBlog></PrivateRoute>}></Route>
         <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>}>
