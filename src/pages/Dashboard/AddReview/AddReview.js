@@ -12,7 +12,7 @@ const AddReview = () => {
 
     const onSubmit = data => {
 
-        axios.post('https://shielded-dawn-26233.herokuapp.com/review', data)
+        axios.post('https://tsunami-tour-serversite.vercel.app/review', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Review Added successfully");

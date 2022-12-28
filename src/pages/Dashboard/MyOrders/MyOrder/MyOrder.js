@@ -4,13 +4,13 @@ const MyOrder = () => {
     const [services, setServices] = useState([]);
 
     useEffect(()=>{
-        fetch(`https://shielded-dawn-26233.herokuapp.com/users`)
+        fetch(`https://tsunami-tour-serversite.vercel.app/users`)
         .then(res => res.json())
         .then(data => setServices(data))
     }, []);
 
     const handleDelete = id => {
-        const url = `https://shielded-dawn-26233.herokuapp.com/users/${id}`
+        const url = `https://tsunami-tour-serversite.vercel.app/users/${id}`
         fetch(url, {
             method: 'DELETE'
         })

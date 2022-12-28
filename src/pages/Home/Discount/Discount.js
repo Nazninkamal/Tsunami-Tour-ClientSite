@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button, Card, Col } from 'react-bootstrap';
+import {  Col } from 'react-bootstrap';
 
 import { Link } from 'react-router-dom';
 
 const Discount = ({discount}) => {
-    const {id, name, img,time, price} = discount;
+    const { name, img,time, price} = discount;
 
     return (
         <Col lg={4} md={4} sm={6} xs={12} className="mb-5"> 

@@ -10,7 +10,7 @@ const PurchaseBox = () => {
   const onSubmit = data => {
     console.log(data);
 
-    axios.post('https://shielded-dawn-26233.herokuapp.com/purchase', data)
+    axios.post('https://tsunami-tour-serversite.vercel.app/purchase', data)
     .then(res => {
       if(res.data.insertedId){
         alert('added successfully');

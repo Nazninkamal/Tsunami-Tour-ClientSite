@@ -8,7 +8,7 @@ const AddService = () => {
   const onSubmit = data => {
     console.log(data);
 
-    axios.post('https://shielded-dawn-26233.herokuapp.com/services', data)
+    axios.post('https://tsunami-tour-serversite.vercel.app/services', data)
     .then(res => {
       if(res.data.insertedId){
         alert('added successfully');

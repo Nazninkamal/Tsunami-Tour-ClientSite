@@ -6,7 +6,7 @@ import SharedBanner from '../Shared/SharedBanner/SharedBanner';
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
     useEffect(() =>{
-        fetch('https://shielded-dawn-26233.herokuapp.com/blogs')
+        fetch('https://tsunami-tour-serversite.vercel.app/blogs')
         .then(res => res.json())
         .then(data => setBlogs(data));
 

@@ -6,7 +6,7 @@ import './Packages.css'
 const Packages = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() =>{
-        fetch('https://shielded-dawn-26233.herokuapp.com/services')
+        fetch('https://tsunami-tour-serversite.vercel.app/services')
         .then(res => res.json())
         .then(data => setPackages(data));
 

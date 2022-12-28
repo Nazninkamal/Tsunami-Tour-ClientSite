@@ -130,7 +130,7 @@ const useFirebase = () => {
 
         const users = { name: name, email: email };
 
-        fetch('https://shielded-dawn-26233.herokuapp.com/users', {
+        fetch('https://tsunami-tour-serversite.vercel.app/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -143,7 +143,7 @@ const useFirebase = () => {
     // check admin
 
     useEffect(() => {
-        fetch(`https://shielded-dawn-26233.herokuapp.com/users/${user.email}`)
+        fetch(`https://tsunami-tour-serversite.vercel.app/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])

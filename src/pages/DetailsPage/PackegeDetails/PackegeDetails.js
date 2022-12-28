@@ -12,7 +12,7 @@ const PackegeDetails = () => {
     const {packegesId} = useParams()
     const [packege, setPackege] = useState({})
     useEffect(() =>{
-        fetch(`https://shielded-dawn-26233.herokuapp.com/services/${packegesId}`)
+        fetch(`https://tsunami-tour-serversite.vercel.app/services/${packegesId}`)
         .then((res) => res.json())
           .then((data) => setPackege(data))
     } , [])

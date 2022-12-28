@@ -44,7 +44,7 @@ const WriteBlog = () => {
         formData.append('image', image);
         formData.append('status', status)
 
-        axios.post('https://shielded-dawn-26233.herokuapp.com/experience', formData, {
+        axios.post('https://tsunami-tour-serversite.vercel.app//experience', formData, {
             headers: {
                 'accept': 'application/json',
                 'Accept-Language': 'en-US,en;q=0.8',
